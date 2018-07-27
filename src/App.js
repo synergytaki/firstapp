@@ -5,7 +5,7 @@ import Hello from './Hello';
 
 class App extends Component {
   render() {
-    const p = {value:'fuga'};
+    const p = {value:'20180727'};
 
     return (
       <div className="App">

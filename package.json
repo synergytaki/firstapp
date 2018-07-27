@@ -4,7 +4,19 @@
   "homepage": "https://synergytaki.github.io/firstapp",
   "main": "build/static/js/main.js",
   "private": false,
-  "dependencies": {
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dev-utils": "^5.0.1",
+    "react-dom": "^16.4.1"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -46,15 +58,6 @@
     "webpack-dev-server": "2.9.4",
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
-  },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "deploy": "npm run build && gh-pages -d build"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.2.0"
   },
   "jest": {
     "collectCoverageFrom": [
